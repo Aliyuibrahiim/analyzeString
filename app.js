@@ -66,6 +66,11 @@ app.get('/strings/:text', (req, res) => {
     res.json(data);
 });
 
+// Get all texts
+app.get('/strings', (req, res) => {
+    res.json(Object.values(strings));
+});
+
 app.listen(3000, () => {
     console.log('Server running on http://localhost:3000');
 });
